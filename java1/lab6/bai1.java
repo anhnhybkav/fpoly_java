@@ -19,10 +19,10 @@ public class bai1 {
     // Ham chuan hoa ten
     public static String chuanHoa(String s) {
         StringBuilder sb = new StringBuilder();
-        String name[] = s.trim().split("\\s+");
-        for(String tmp : name) {
-            sb.append(String.valueOf(tmp.charAt(0)).toUpperCase());
-            sb.append(tmp.substring(1).toLowerCase());
+        String words[] = s.trim().split("\\s+");
+        for(String word : words) {
+            sb.append(String.valueOf(word.charAt(0)).toUpperCase());
+            sb.append(word.substring(1).toLowerCase());
             sb.append(" ");
         }
         return sb.toString().trim();
