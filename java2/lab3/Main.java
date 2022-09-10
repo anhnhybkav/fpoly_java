@@ -1,11 +1,11 @@
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+// import java.io.FileInputStream;
+// import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+// import java.io.ObjectInputStream;
+// import java.io.ObjectOutputStream;
 
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
@@ -24,13 +24,14 @@ public class Main {
             out.write("\n");
             out.close();
             //DOC TU FILE TEXT
-            FileReader input = new FileReader(filename);
+            FileReader scanner = new FileReader(filename);
             System.out.println("Doc tu file first.txt:");
-            int ch = input.read();
+            int ch = scanner.read();
             while (ch != -1) {
                 System.out.print((char) ch);
-                ch = input.read();      //DOC TU FILE
+                ch = scanner.read();      //DOC TU FILE
             }
+            scanner.close();
         } catch (Exception e) {
             System.out.println("Co loi: " + e);
         }
